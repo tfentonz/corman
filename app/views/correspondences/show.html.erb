@@ -1,74 +1,85 @@
-<p id="notice"><%= notice %></p>
+<h1>Correspondence</h1>
 
-<p>
-  <strong>File:</strong>
-  <%= @correspondence.file_id %>
-</p>
+<div class="btn-toolbar">
+  <%= link_to 'Edit', edit_correspondence_path(@correspondence), class: 'btn btn-default' %>
+</div>
 
-<p>
-  <strong>Folio:</strong>
-  <%= @correspondence.folio_id %>
-</p>
+<div class="row">
+  <p id="notice" class="bg-info"><%= notice %></p>
+</div>
 
-<p>
-  <strong>Folio date:</strong>
-  <%= @correspondence.folio_date %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>ID</strong></div>
+  <div class="col-md-11"><%= @correspondence.id %></div>
+</div>
 
-<p>
-  <strong>Review date:</strong>
-  <%= @correspondence.review_date %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>File</strong></div>
+  <div class="col-md-11"><%= @correspondence.file_id %></div>
+</div>
 
-<p>
-  <strong>Meeting:</strong>
-  <%= @correspondence.meeting_id %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Folio</strong></div>
+  <div class="col-md-11"><%= @correspondence.folio_id %></div>
+</div>
 
-<p>
-  <strong>Reference:</strong>
-  <%= @correspondence.reference %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Folio date</strong></div>
+  <div class="col-md-11"><%= l @correspondence.folio_date if @correspondence.folio_date %></div>
+</div>
 
-<p>
-  <strong>Officer:</strong>
-  <%= @correspondence.officer_id %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Review date</strong></div>
+  <div class="col-md-11"><%= l @correspondence.review_date if @correspondence.review_date %></div>
+</div>
 
-<p>
-  <strong>Correspondent:</strong>
-  <%= @correspondence.correspondent_id %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Meeting</strong></div>
+  <div class="col-md-1"><%= l @correspondence.meeting.date %></div>
+  <div class="col-md-10"><%= @correspondence.meeting_description %></div>
+</div>
 
-<p>
-  <strong>Type:</strong>
-  <%= @correspondence.type_id %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Reference</strong></div>
+  <div class="col-md-11"><%= @correspondence.reference %></div>
+</div>
 
-<p>
-  <strong>Summary:</strong>
-  <%= @correspondence.summary %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Officer</strong></div>
+  <div class="col-md-11"><%= link_to @correspondence.officer_name, officer_path %></div>
+</div>
 
-<p>
-  <strong>Details:</strong>
-  <%= @correspondence.details %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Correspondent</strong></div>
+  <div class="col-md-11"><%= link_to @correspondence.correspondent_name, correspondent_path %></div>
+</div>
 
-<p>
-  <strong>Linkto:</strong>
-  <%= @correspondence.linkto %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Type</strong></div>
+  <div class="col-md-11"><%= @correspondence.type_description %></div>
+</div>
 
-<p>
-  <strong>Linkfrom:</strong>
-  <%= @correspondence.linkfrom %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Summary</strong></div>
+  <div class="col-md-11"><%= @correspondence.summary %></div>
+</div>
 
-<p>
-  <strong>Note count:</strong>
-  <%= @correspondence.note_count %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Details</strong></div>
+  <div class="col-md-11"><%= @correspondence.details %></div>
+</div>
 
-<%= link_to 'Edit', edit_correspondence_path(@correspondence) %> |
-<%= link_to 'Back', correspondences_path %>
+<div class="row">
+  <div class="col-md-1"><strong>Linkto</strong></div>
+  <div class="col-md-11"><%= @correspondence.linkto %></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"><strong>Linkfrom</strong></div>
+  <div class="col-md-11"><%= @correspondence.linkfrom %></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"><strong>Note count</strong></div>
+  <div class="col-md-11"><%= @correspondence.note_count %></div>
+</div>

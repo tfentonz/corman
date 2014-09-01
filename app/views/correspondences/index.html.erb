@@ -15,10 +15,6 @@
       <th class="col-md-1">ID</th>
       <th>File</th>
       <th>Folio</th>
-      <th>Folio date</th>
-      <th>Review date</th>
-      <th>Meeting</th>
-      <th>Reference</th>
       <th>Officer</th>
       <th>Correspondent</th>
       <th>Type</th>
@@ -34,15 +30,11 @@
         <td><%= link_to correspondence.id, correspondence %></td>
         <td><%= correspondence.file_id %></td>
         <td><%= correspondence.folio_id %></td>
-        <td><%= correspondence.folio_date %></td>
-        <td><%= correspondence.review_date %></td>
-        <td><%= correspondence.meeting_id %></td>
-        <td><%= correspondence.reference %></td>
-        <td><%= correspondence.officer_id %></td>
-        <td><%= correspondence.correspondent_id %></td>
-        <td><%= correspondence.type_id %></td>
-        <td><%= correspondence.summary %></td>
-        <td><%= correspondence.details %></td>
+        <td><%= correspondence.officer_name %></td>
+        <td><%= correspondence.correspondent_name %></td>
+        <td><%= correspondence.type_description %></td>
+        <td><%= truncate(correspondence.summary) %></td>
+        <td><%= truncate(correspondence.details) %></td>
         <td class="text-right text-nowrap">
           <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_correspondence_path(correspondence) %>
           <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-default btn-sm'), correspondence, method: :delete, data: { confirm: 'Are you sure?' } %>

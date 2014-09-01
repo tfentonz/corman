@@ -1,34 +1,61 @@
-<p id="notice"><%= notice %></p>
+<h1>Correspondent</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @correspondent.name %>
-</p>
+<div class="btn-toolbar">
+  <%= link_to 'Edit', edit_correspondent_path(@correspondent), class: 'btn btn-default' %>
+</div>
 
-<p>
-  <strong>Street:</strong>
-  <%= @correspondent.street %>
-</p>
+<div class="row">
+  <p id="notice" class="bg-info"><%= notice %></p>
+</div>
 
-<p>
-  <strong>Town:</strong>
-  <%= @correspondent.town %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>ID</strong></div>
+  <div class="col-md-11"><%= @correspondent.id %></div>
+</div>
 
-<p>
-  <strong>State:</strong>
-  <%= @correspondent.state %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Name</strong></div>
+  <div class="col-md-11"><%= @correspondent.name %></div>
+</div>
 
-<p>
-  <strong>Postcode:</strong>
-  <%= @correspondent.postcode %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Address</strong></div>
+  <div class="col-md-11">
+    <address><%= @correspondent.street %><br>
+      <%= @correspondent.town %> <%= @correspondent.state %> <%= @correspondent.postcode %></address>
+  </div>
+</div>
 
-<p>
-  <strong>Description:</strong>
-  <%= @correspondent.description %>
-</p>
+<% if @correspondent.description.present? %>
+  <div class="row">
+    <div class="col-md-1"><strong>Description</strong></div>
+    <div class="col-md-11"><%= @correspondent.description %></div>
+  </div>
+<% end %>
 
-<%= link_to 'Edit', edit_correspondent_path(@correspondent) %> |
-<%= link_to 'Back', correspondents_path %>
+<h2>Correspondence <span class="badge"><%= @correspondent.correspondences.size %></span></h2>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th class="col-md-1">ID</th>
+      <th>File</th>
+      <th>Folio</th>
+      <th>Folio Date</th>
+      <th>Summary</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @correspondent.correspondences.each do |correspondence| %>
+      <tr>
+        <td><%= link_to correspondence.id, correspondence_path %></td>
+        <td><%= correspondence.file_id %></td>
+        <td><%= correspondence.folio_id %></td>
+        <td><%= l correspondence.folio_date %></td>
+        <td><%= correspondence.summary %></td>
+        <td><%= correspondence.details %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

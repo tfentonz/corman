@@ -1,24 +1,54 @@
-<p id="notice"><%= notice %></p>
+<h1>Officer</h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @officer.name %>
-</p>
+<div class="btn-toolbar">
+  <%= link_to 'Edit', edit_officer_path(@officer), class: 'btn btn-default' %>
+</div>
 
-<p>
-  <strong>Email:</strong>
-  <%= @officer.email %>
-</p>
+<div class="row">
+  <p id="notice" class="bg-info"><%= notice %></p>
+</div>
 
-<p>
-  <strong>Mygroup:</strong>
-  <%= @officer.mygroup %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Name:</strong></div>
+  <div class="col-md-11"><%= @officer.name %></div>
+</div>
 
-<p>
-  <strong>Isgroup:</strong>
-  <%= @officer.isgroup %>
-</p>
+<div class="row">
+  <div class="col-md-1"><strong>Email</strong></div>
+  <div class="col-md-11"><%= mail_to @officer.email %></div>
+</div>
 
-<%= link_to 'Edit', edit_officer_path(@officer) %> |
-<%= link_to 'Back', officers_path %>
+<div class="row">
+  <div class="col-md-1"><strong>Mygroup</strong></div>
+  <div class="col-md-11"><%= @officer.mygroup %></div>
+</div>
+
+<div class="row">
+  <div class="col-md-1"><strong>Group?</strong></div>
+  <div class="col-md-11"><%= @officer.isgroup %></div>
+</div>
+
+<h2>Correspondence <span class="badge"><%= @officer.correspondences.size %></span></h2>
+
+<table class="table table-hover">
+  <thead>
+    <th class="col-md-1">ID</th>
+    <th>File</th>
+    <th>Folio</th>
+    <th>Folio Date</th>
+    <th>Summary</th>
+    <th>Details</th>
+  </thead>
+  <tbody>
+    <% @officer.correspondences.order('folio_date DESC, id DESC').each do |correspondence| %>
+      <tr>
+        <td><%= link_to correspondence.id, correspondence_path %></td>
+        <td><%= correspondence.file_id %></td>
+        <td><%= correspondence.folio_id %></td>
+        <td><%= l correspondence.folio_date %></td>
+        <td><%= correspondence.summary %></td>
+        <td><%= correspondence.details %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

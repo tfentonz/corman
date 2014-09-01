@@ -13,11 +13,10 @@
   <thead>
     <tr>
       <th class="col-md-1">ID</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Mygroup</th>
-      <th>Isgroup</th>
-      <th></th>
+      <th class="col-md-3">Name</th>
+      <th class="col-md-3">Email</th>
+      <th class="col-md-3">Group</th>
+      <th class="col-md-2"></th>
     </tr>
   </thead>
 
@@ -27,8 +26,7 @@
         <td><%= link_to officer.id, officer %></td>
         <td><%= officer.name %></td>
         <td><%= mail_to officer.email %></td>
-        <td><%= officer.mygroup %></td>
-        <td><%= officer.isgroup %></td>
+        <td><%= officer.group_name %></td>
         <td class="text-right text-nowrap">
           <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_officer_path(officer) %>
           <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-default btn-sm'), officer, method: :delete, data: { confirm: 'Are you sure?' } %>

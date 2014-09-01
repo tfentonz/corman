@@ -23,7 +23,7 @@
     <% @meetings.each do |meeting| %>
       <tr>
         <td><%= link_to meeting.id, meeting %></td>
-        <td><%= meeting.date %></td>
+        <td><%= l meeting.date %></td>
         <td><%= meeting.description %></td>
         <td class="text-right text-nowrap">
           <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_meeting_path(meeting) %>
