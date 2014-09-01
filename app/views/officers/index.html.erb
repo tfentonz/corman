@@ -1,35 +1,39 @@
-<h1>Listing officers</h1>
+<h1>Listing Officers</h1>
+
+<div class="row">
+  <div class="col-md-2">
+    <%= link_to 'New Officer', new_officer_path, class: 'btn btn-default' %>
+  </div>
+  <div class="col-md-10 text-right">
+    <%= paginate @officers %>
+  </div>
+</div>
 
 <table class="table table-striped">
   <thead>
     <tr>
+      <th class="col-md-1">ID</th>
       <th>Name</th>
       <th>Email</th>
       <th>Mygroup</th>
       <th>Isgroup</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @officers.each do |officer| %>
       <tr>
+        <td><%= link_to officer.id, officer %></td>
         <td><%= officer.name %></td>
-        <td><%= officer.email %></td>
+        <td><%= mail_to officer.email %></td>
         <td><%= officer.mygroup %></td>
         <td><%= officer.isgroup %></td>
-        <td><%= link_to 'Show', officer %></td>
-        <td><%= link_to 'Edit', edit_officer_path(officer) %></td>
-        <td><%= link_to 'Destroy', officer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-right text-nowrap">
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_officer_path(officer) %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-default btn-sm'), officer, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Officer', new_officer_path, class: 'btn btn-default' %>
-
-<br>
-
-<%= paginate @officers %>

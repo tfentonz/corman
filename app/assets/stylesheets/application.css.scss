@@ -17,6 +17,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.pagination {
+  margin-top: 0;
+}
+
 .top-buffer {
   margin-top: 10px;
 }

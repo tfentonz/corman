@@ -1,29 +1,33 @@
-<h1>Listing types</h1>
+<h1>Listing Types</h1>
+
+<div class="row">
+  <div class="col-md-2">
+    <%= link_to 'New Type', new_type_path, class: 'btn btn-default' %>
+  </div>
+  <div class="col-md-10 text-right">
+    <%= paginate @types %>
+  </div>
+</div>
 
 <table class="table table-striped">
   <thead>
     <tr>
+      <th class="col-md-1">ID</th>
       <th>Description</th>
-      <th colspan="3"></th>
+      <th></th>
     </tr>
   </thead>
 
   <tbody>
     <% @types.each do |type| %>
       <tr>
+        <td><%= link_to type.id, type %></td>
         <td><%= type.description %></td>
-        <td><%= link_to 'Show', type %></td>
-        <td><%= link_to 'Edit', edit_type_path(type) %></td>
-        <td><%= link_to 'Destroy', type, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td class="text-right text-nowrap">
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_type_path(type) %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-default btn-sm'), type, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Type', new_type_path, class: 'btn btn-default' %>
-
-<br>
-
-<%= paginate @types %>
