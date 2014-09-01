@@ -69,12 +69,6 @@ ActiveRecord::Schema.define(version: 0) do
     t.string  "isgroup", limit: 1
   end
 
-  create_table "corman_schema_migrations", id: false, force: true do |t|
-    t.string "version", null: false
-  end
-
-  add_index "corman_schema_migrations", ["version"], name: "corman_unique_schema_migrations", unique: true, using: :btree
-
   create_table "corman_type", force: true do |t|
     t.string "description", limit: 60
   end
