@@ -1,6 +1,6 @@
 <h1>Listing officers</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -28,4 +28,8 @@
 
 <br>
 
-<%= link_to 'New Officer', new_officer_path %>
+<%= link_to 'New Officer', new_officer_path, class: 'btn btn-default' %>
+
+<br>
+
+<%= paginate @officers %>

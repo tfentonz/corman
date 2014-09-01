@@ -1,6 +1,6 @@
 <h1>Listing correspondences</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>File</th>
@@ -48,4 +48,8 @@
 
 <br>
 
-<%= link_to 'New Correspondence', new_correspondence_path %>
+<%= link_to 'New Correspondence', new_correspondence_path, class: 'btn btn-default' %>
+
+<br>
+
+<%= paginate @correspondences %>

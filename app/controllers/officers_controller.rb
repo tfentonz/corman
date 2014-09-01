@@ -4,7 +4,7 @@ class OfficersController < ApplicationController
   # GET /officers
   # GET /officers.json
   def index
-    @officers = Officer.all
+    @officers = Officer.page params[:page]
   end
 
   # GET /officers/1

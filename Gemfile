@@ -15,6 +15,8 @@ gem 'coffee-rails', '~> 4.0.0'
 # gem 'therubyracer',  platforms: :ruby
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
+# Use kaminari for pagination
+gem 'kaminari'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'

@@ -4,7 +4,7 @@ class CorrespondencesController < ApplicationController
   # GET /correspondences
   # GET /correspondences.json
   def index
-    @correspondences = Correspondence.all
+    @correspondences = Correspondence.page params[:page]
   end
 
   # GET /correspondences/1

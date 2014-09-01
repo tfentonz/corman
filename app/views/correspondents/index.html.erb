@@ -1,6 +1,6 @@
 <h1>Listing correspondents</h1>
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -32,4 +32,8 @@
 
 <br>
 
-<%= link_to 'New Correspondent', new_correspondent_path %>
+<%= link_to 'New Correspondent', new_correspondent_path, class: 'btn btn-default' %>
+
+<br>
+
+<%= paginate @correspondents %>
