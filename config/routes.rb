@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  resources :correspondences
+
+  resources :correspondents
+
+  resources :officers
+
+  resources :meetings
+
+  resources :types
+
+  root 'correspondents#index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

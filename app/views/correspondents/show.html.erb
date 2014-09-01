@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @correspondent.name %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @correspondent.street %>
+</p>
+
+<p>
+  <strong>Town:</strong>
+  <%= @correspondent.town %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @correspondent.state %>
+</p>
+
+<p>
+  <strong>Postcode:</strong>
+  <%= @correspondent.postcode %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @correspondent.description %>
+</p>
+
+<%= link_to 'Edit', edit_correspondent_path(@correspondent) %> |
+<%= link_to 'Back', correspondents_path %>

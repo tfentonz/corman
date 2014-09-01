@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>File:</strong>
+  <%= @correspondence.file_id %>
+</p>
+
+<p>
+  <strong>Folio:</strong>
+  <%= @correspondence.folio_id %>
+</p>
+
+<p>
+  <strong>Folio date:</strong>
+  <%= @correspondence.folio_date %>
+</p>
+
+<p>
+  <strong>Review date:</strong>
+  <%= @correspondence.review_date %>
+</p>
+
+<p>
+  <strong>Meeting:</strong>
+  <%= @correspondence.meeting_id %>
+</p>
+
+<p>
+  <strong>Reference:</strong>
+  <%= @correspondence.reference %>
+</p>
+
+<p>
+  <strong>Officer:</strong>
+  <%= @correspondence.officer_id %>
+</p>
+
+<p>
+  <strong>Correspondent:</strong>
+  <%= @correspondence.correspondent_id %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @correspondence.type_id %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @correspondence.summary %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @correspondence.details %>
+</p>
+
+<p>
+  <strong>Linkto:</strong>
+  <%= @correspondence.linkto %>
+</p>
+
+<p>
+  <strong>Linkfrom:</strong>
+  <%= @correspondence.linkfrom %>
+</p>
+
+<p>
+  <strong>Note count:</strong>
+  <%= @correspondence.note_count %>
+</p>
+
+<%= link_to 'Edit', edit_correspondence_path(@correspondence) %> |
+<%= link_to 'Back', correspondences_path %>

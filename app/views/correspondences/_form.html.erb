@@ -1,0 +1,73 @@
+<%= form_for(@correspondence) do |f| %>
+  <% if @correspondence.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@correspondence.errors.count, "error") %> prohibited this correspondence from being saved:</h2>
+
+      <ul>
+      <% @correspondence.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :file_id %><br>
+    <%= f.number_field :file_id %>
+  </div>
+  <div class="field">
+    <%= f.label :folio_id %><br>
+    <%= f.number_field :folio_id %>
+  </div>
+  <div class="field">
+    <%= f.label :folio_date %><br>
+    <%= f.date_select :folio_date %>
+  </div>
+  <div class="field">
+    <%= f.label :review_date %><br>
+    <%= f.date_select :review_date %>
+  </div>
+  <div class="field">
+    <%= f.label :meeting_id %><br>
+    <%= f.number_field :meeting_id %>
+  </div>
+  <div class="field">
+    <%= f.label :reference %><br>
+    <%= f.text_field :reference %>
+  </div>
+  <div class="field">
+    <%= f.label :officer_id %><br>
+    <%= f.number_field :officer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :correspondent_id %><br>
+    <%= f.number_field :correspondent_id %>
+  </div>
+  <div class="field">
+    <%= f.label :type_id %><br>
+    <%= f.number_field :type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :summary %><br>
+    <%= f.text_field :summary %>
+  </div>
+  <div class="field">
+    <%= f.label :details %><br>
+    <%= f.text_field :details %>
+  </div>
+  <div class="field">
+    <%= f.label :linkto %><br>
+    <%= f.number_field :linkto %>
+  </div>
+  <div class="field">
+    <%= f.label :linkfrom %><br>
+    <%= f.number_field :linkfrom %>
+  </div>
+  <div class="field">
+    <%= f.label :note_count %><br>
+    <%= f.number_field :note_count %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  file_id: 1
+  folio_id: 1
+  folio_date: 2014-09-01
+  review_date: 2014-09-01
+  meeting_id: 1
+  reference: MyString
+  officer_id: 1
+  correspondent_id: 1
+  type_id: 1
+  summary: MyString
+  details: MyString
+  linkto: 1
+  linkfrom: 1
+  note_count: 1
+
+two:
+  file_id: 1
+  folio_id: 1
+  folio_date: 2014-09-01
+  review_date: 2014-09-01
+  meeting_id: 1
+  reference: MyString
+  officer_id: 1
+  correspondent_id: 1
+  type_id: 1
+  summary: MyString
+  details: MyString
+  linkto: 1
+  linkfrom: 1
+  note_count: 1
