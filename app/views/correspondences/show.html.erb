@@ -24,19 +24,21 @@
 </div>
 
 <div class="row">
-  <div class="col-md-1"><strong>Folio date</strong></div>
+  <div class="col-md-1"><strong>Folio Date</strong></div>
   <div class="col-md-11"><%= l @correspondence.folio_date if @correspondence.folio_date %></div>
 </div>
 
 <div class="row">
-  <div class="col-md-1"><strong>Review date</strong></div>
+  <div class="col-md-1"><strong>Review Date</strong></div>
   <div class="col-md-11"><%= l @correspondence.review_date if @correspondence.review_date %></div>
 </div>
 
 <div class="row">
   <div class="col-md-1"><strong>Meeting</strong></div>
-  <div class="col-md-1"><%= l @correspondence.meeting.date %></div>
-  <div class="col-md-10"><%= @correspondence.meeting_description %></div>
+  <% if @correspondence.meeting %>
+    <div class="col-md-1"><%= l @correspondence.meeting.date %></div>
+    <div class="col-md-10"><%= @correspondence.meeting_description %></div>
+  <% end %>
 </div>
 
 <div class="row">
@@ -69,17 +71,21 @@
   <div class="col-md-11"><%= @correspondence.details %></div>
 </div>
 
-<div class="row">
-  <div class="col-md-1"><strong>Linkto</strong></div>
-  <div class="col-md-11"><%= @correspondence.linkto %></div>
-</div>
+<% if @correspondence.linkto > 0 %>
+  <div class="row">
+    <div class="col-md-1"><strong>Link To</strong></div>
+    <div class="col-md-11"><%= @correspondence.linkto %></div>
+  </div>
+<% end %>
+
+<% if @correspondence.linkfrom > 0 %>
+  <div class="row">
+    <div class="col-md-1"><strong>Link From</strong></div>
+    <div class="col-md-11"><%= @correspondence.linkfrom %></div>
+  </div>
+<% end %>
 
 <div class="row">
-  <div class="col-md-1"><strong>Linkfrom</strong></div>
-  <div class="col-md-11"><%= @correspondence.linkfrom %></div>
-</div>
-
-<div class="row">
-  <div class="col-md-1"><strong>Note count</strong></div>
+  <div class="col-md-1"><strong>Note Count</strong></div>
   <div class="col-md-11"><%= @correspondence.note_count %></div>
 </div>
