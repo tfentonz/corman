@@ -1,7 +1,7 @@
 <h1>Correspondent</h1>
 
 <div class="btn-toolbar">
-  <%= link_to 'Edit', edit_correspondent_path(@correspondent), class: 'btn btn-default' %>
+  <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default'), edit_correspondent_path(@correspondent) %>
 </div>
 
 <div class="row">

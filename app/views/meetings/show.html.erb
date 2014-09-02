@@ -1,7 +1,7 @@
 <h1>Meeting</h1>
 
 <div class="btn-toolbar">
-  <%= link_to 'Edit', edit_meeting_path(@meeting), class: 'btn btn-default' %>
+  <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default'), edit_meeting_path(@meeting) %>
 </div>
 
 <div class="row">
