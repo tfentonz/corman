@@ -2,7 +2,7 @@
 
 <div class="row">
   <div class="col-md-2">
-    <%= link_to 'New Type', new_type_path, class: 'btn btn-default' %>
+    <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-plus') + ' New Type', class: 'btn btn-default'), new_type_path %>
   </div>
   <div class="col-md-10 text-right">
     <%= paginate @types %>
