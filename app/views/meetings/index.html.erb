@@ -26,8 +26,8 @@
         <td><%= l meeting.date %></td>
         <td><%= meeting.description %></td>
         <td class="text-right text-nowrap">
-          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_meeting_path(meeting) %>
-          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-default btn-sm'), meeting, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-sm btn-default'), edit_meeting_path(meeting) %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-sm btn-default'), meeting, method: :delete, data: { confirm: 'Are you sure?' } %>
       </td>
       </tr>
     <% end %>

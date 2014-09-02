@@ -36,8 +36,8 @@
         <td><%= truncate(correspondence.summary) %></td>
         <td><%= truncate(correspondence.details) %></td>
         <td class="text-right text-nowrap">
-          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_correspondence_path(correspondence) %>
-          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-default btn-sm'), correspondence, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-sm btn-default'), edit_correspondence_path(correspondence) %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-sm btn-default'), correspondence, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>

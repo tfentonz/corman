@@ -24,8 +24,8 @@
         <td><%= link_to type.id, type %></td>
         <td><%= type.description %></td>
         <td class="text-right text-nowrap">
-          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_type_path(type) %>
-          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-default btn-sm'), type, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-sm btn-default'), edit_type_path(type) %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-sm btn-default'), type, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>

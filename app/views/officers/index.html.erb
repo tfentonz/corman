@@ -28,8 +28,8 @@
         <td><%= mail_to officer.email %></td>
         <td><%= officer.group_name %></td>
         <td class="text-right text-nowrap">
-          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-default btn-sm'), edit_officer_path(officer) %>
-          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-default btn-sm'), officer, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-edit') + ' Edit', class: 'btn btn-sm btn-default'), edit_officer_path(officer) %>
+          <%= link_to content_tag(:button, content_tag(:span, nil, class: 'glyphicon glyphicon-trash') + ' Delete', class: 'btn btn-sm btn-default'), officer, method: :delete, data: { confirm: 'Are you sure?' } %>
         </td>
       </tr>
     <% end %>
