@@ -4,7 +4,8 @@ class Correspondence < ActiveRecord::Base
   default_scope { where('id <> 0') }
 
   belongs_to :correspondent
-  has_and_belongs_to_many :keywords
+  has_many :correspondences_keywords
+  has_many :keywords, through: :correspondences_keywords
   belongs_to :meeting
   belongs_to :officer
   belongs_to :type
