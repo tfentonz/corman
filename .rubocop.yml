@@ -1,0 +1,12 @@
+AllCops:
+  Exclude:
+    - config/**/*
+    - db/**/*
+    - test/**/*
+  RunRailsCops: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/Encoding:
+  Enabled: false
