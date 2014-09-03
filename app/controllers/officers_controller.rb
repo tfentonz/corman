@@ -62,13 +62,14 @@ class OfficersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_officer
-      @officer = Officer.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def officer_params
-      params.require(:officer).permit(:name, :email, :mygroup, :isgroup)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_officer
+    @officer = Officer.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def officer_params
+    params.require(:officer).permit(:name, :email, :mygroup, :isgroup)
+  end
 end

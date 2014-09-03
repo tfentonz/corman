@@ -62,13 +62,14 @@ class CorrespondentsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_correspondent
-      @correspondent = Correspondent.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def correspondent_params
-      params.require(:correspondent).permit(:name, :street, :town, :state, :postcode, :description)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_correspondent
+    @correspondent = Correspondent.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def correspondent_params
+    params.require(:correspondent).permit(:name, :street, :town, :state, :postcode, :description)
+  end
 end

@@ -62,13 +62,14 @@ class CorrespondencesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_correspondence
-      @correspondence = Correspondence.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def correspondence_params
-      params.require(:correspondence).permit(:file_id, :folio_id, :folio_date, :review_date, :meeting_id, :reference, :officer_id, :correspondent_id, :type_id, :summary, :details, :linkto, :linkfrom, :note_count)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_correspondence
+    @correspondence = Correspondence.find(params[:id])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def correspondence_params
+    params.require(:correspondence).permit(:file_id, :folio_id, :folio_date, :review_date, :meeting_id, :reference, :officer_id, :correspondent_id, :type_id, :summary, :details, :linkto, :linkfrom, :note_count)
+  end
 end
