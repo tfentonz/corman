@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+types = Type.create([{ name: 'Inwards' }, { name: 'Outwards' },
+                     { name: 'Memo' }, { name: 'Email Inwards' },
+                     { name: 'Email Outwards' }, { name: 'Agenda' },
+                     { name: 'Minutes' }]

@@ -9,7 +9,7 @@ one:
   reference: MyString
   officer_id: 1
   correspondent_id: 1
-  type_id: 1
+  type: inwards
   summary: MyString
   details: MyString
   linkto: 1
@@ -25,7 +25,7 @@ two:
   reference: MyString
   officer_id: 1
   correspondent_id: 1
-  type_id: 1
+  type: outwards
   summary: MyString
   details: MyString
   linkto: 1

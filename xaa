@@ -1,0 +1,7 @@
+git add \
+.rubocop.yml \
+app/controllers/correspondences_controller.rb \
+app/controllers/correspondents_controller.rb \
+app/controllers/meetings_controller.rb \
+app/controllers/officers_controller.rb \
+app/controllers/types_controller.rb

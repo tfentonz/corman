@@ -4,7 +4,7 @@ one:
   name: MyString
   street: MyString
   town: MyString
-  state: QLD
+  state: MyS
   postcode: 1
   description: MyString
 
@@ -12,6 +12,6 @@ two:
   name: MyString
   street: MyString
   town: MyString
-  state: QLD
+  state: MyS
   postcode: 1
   description: MyString
